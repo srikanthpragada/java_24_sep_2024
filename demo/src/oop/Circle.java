@@ -4,8 +4,8 @@ public class Circle {
 	// Instance variable
 	private double radius;
 
-	// Methods
-	public void setRadius(double r) {
+	// constructor
+	public Circle(double r) {
 		radius = r;
 	}
 
