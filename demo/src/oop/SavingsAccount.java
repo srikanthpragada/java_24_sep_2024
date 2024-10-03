@@ -11,6 +11,11 @@ public class SavingsAccount {
 		customer = cust;
 		balance = bal;
 	}
+	
+	public SavingsAccount(int no, String cust) {
+		acno = no;
+		customer = cust;
+	}
 
 	public void print() {
 		System.out.println(acno);
