@@ -24,7 +24,7 @@ public class SavingsAccount {
 	}
 
 	public void deposit(double amount) {
-		balance += amount;
+		this.balance += amount;
 	}
 
 	public void withdraw(double amount) {
