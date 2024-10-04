@@ -14,6 +14,9 @@ public class TestSavingsAccount {
 		
 		s2.print();
 		
+		 
+		System.out.println(SavingsAccount.getMinBalance());
+		
 	}
 
 }

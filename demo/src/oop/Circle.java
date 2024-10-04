@@ -5,8 +5,8 @@ public class Circle {
 	private double radius;
 
 	// constructor
-	public Circle(double r) {
-		radius = r;
+	public Circle(double radius) {
+		this.radius = radius;
 	}
 
 	public double getArea() {

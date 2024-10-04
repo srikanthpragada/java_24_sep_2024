@@ -6,21 +6,24 @@ public class SavingsAccount {
 	private String customer;
 	private double balance;
 
-	public SavingsAccount(int no, String cust, double bal) {
-		acno = no;
-		customer = cust;
-		balance = bal;
+	// static or class variable
+	private static double minBalance = 5000;
+
+	public SavingsAccount(int acno, String customer, double balance) {
+		this.acno = acno;
+		this.customer = customer;
+		this.balance = balance;
 	}
-	
-	public SavingsAccount(int no, String cust) {
-		acno = no;
-		customer = cust;
+
+	public SavingsAccount(int acno, String customer) {
+		// call another constructor
+		this(acno, customer, 0);
 	}
 
 	public void print() {
-		System.out.println(acno);
-		System.out.println(customer);
-		System.out.println(balance);
+		System.out.println(this.acno);
+		System.out.println(this.customer);
+		System.out.println(this.balance);
 	}
 
 	public void deposit(double amount) {
@@ -28,10 +31,15 @@ public class SavingsAccount {
 	}
 
 	public void withdraw(double amount) {
-		balance -= amount;
+		if (amount >= this.balance - SavingsAccount.minBalance)
+			this.balance -= amount;
 	}
-	
+
 	public double getBalance() {
-		return balance;
+		return this.balance;
+	}
+
+	public static double getMinBalance() {
+		return SavingsAccount.minBalance;
 	}
 }
