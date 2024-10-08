@@ -1,6 +1,6 @@
 package oop;
 
-class Doctor {
+abstract class Doctor {
 	protected String name, dept;
 
 	public Doctor(String name, String dept) {
@@ -13,6 +13,8 @@ class Doctor {
 		System.out.println(this.name);
 		System.out.println(this.dept);
 	}
+	
+	public abstract int getSalary();
 }
 
 class ResidentDoctor extends Doctor {
@@ -59,10 +61,25 @@ public class TestDoctor {
 
 	public static void main(String[] args) {
 		 ResidentDoctor rd = new ResidentDoctor("Dr. Joe", "CARD",500000);
-		 rd.print();
+		 //rd.print();
 		 
 		 Consultant cd = new Consultant("Dr. Andy", "NERO", 10, 1500);
-		 System.out.println(cd.getSalary());
+		 //System.out.println(cd.getSalary());
+		 
+		 Doctor d; 
+		 
+		 d = rd;     // upcasting 
+		 d.print();  // print() from rd  - runtime polymorphism 
+		 System.out.println(d.getSalary());  // from rd - runtime polymorphism
+		 
+		 d = cd;     // upcasting
+		 d.print();  // print() from cd 
+		 
+		 if(d instanceof ResidentDoctor)
+		      rd = (ResidentDoctor) d;  // Downcasting 
+		 
+		 if (d instanceof Consultant c) // Pattern matching for instanceof
+			    c.print(); 
 		 
 	}
 }
