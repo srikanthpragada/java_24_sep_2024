@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.Arrays;
+
 abstract class Shape {
 	private int x, y;
 
@@ -50,7 +52,7 @@ public class TestShape {
 
 		s = new Rect(10, 10, 15, 20);
 		System.out.println(s.getArea());
-
+		
 	}
 
 }
