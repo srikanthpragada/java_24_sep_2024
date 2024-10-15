@@ -8,7 +8,6 @@ public class LocalDateDemo {
 		 LocalDate d1 = LocalDate.now();
 		 System.out.println(d1);
 		 System.out.println(d1.plusDays(20));
-
 	}
 
 }
