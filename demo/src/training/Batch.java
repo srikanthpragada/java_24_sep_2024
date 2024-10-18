@@ -1,5 +1,10 @@
 package training;
 
-public class Batch {
+// Package-level class 
+class Trainer {
+	
+}
 
+public class Batch {
+   private Trainer trainer;
 }
