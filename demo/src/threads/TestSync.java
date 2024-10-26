@@ -5,7 +5,7 @@ class Data {
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
 			try {
-				Thread.sleep(100);
+				Thread.sleep(1000);
 			} catch (Exception ex) {
 			}
 		}
