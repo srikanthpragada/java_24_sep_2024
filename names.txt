@@ -1,5 +1,7 @@
+C++
 Java
 JavaScript
+Ruby
 Python
 SQL
 C
